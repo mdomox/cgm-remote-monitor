@@ -94,9 +94,9 @@ function create(env, ctx) {
         limit: 1048576 * 50
     }), api);
 
-    app.use('/api/v2/properties', ctx.properties);
-    app.use('/api/v2/authorization', ctx.authorization.endpoints);
-    app.use('/api/v2/ddata', ddata);
+    app.use('/lib/api/properties', ctx.properties);
+    app.use('/lib/api/authorization', ctx.authorization.endpoints);
+    app.use('/lib/api/ddata', ddata);
 
     // pebble data
     app.get('/pebble', ctx.pebble);
