@@ -8,8 +8,12 @@ bundle/bundle.out.js
 .idea/
 *.iml
 my.env
+my.*.env
+*.pem
+!/tests/fixtures/dummy_private_key.pem
 
-*.env
+fly.toml
+
 static/bower_components/
 .*.sw?
 .DS_Store
@@ -20,7 +24,23 @@ static/bower_components/
 # istanbul output
 coverage/
 
+# flaky test results
+flaky-test-results/
+
 npm-debug.log
 *.heapsnapshot
 
 /tmp
+/.vs
+/cgm-remote-monitor.njsproj
+/cgm-remote-monitor.sln
+/obj/Debug
+/*.bat
+
+# directories created by docker-compose.yml
+mongo-data/
+letsencrypt/
+
+stats.json
+.replit
+attached_assets/
